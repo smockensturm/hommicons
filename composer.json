@@ -1,0 +1,40 @@
+{
+    "name": "homm/hommiconpicker",
+    "description": "Icon Picker",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "hommiconpicker"
+    ],
+    "support": {
+        "docs": "https://github.com/HOMMinteractive/hommiconpicker/blob/master/README.md",
+        "issues": "https://github.com/HOMMinteractive/hommiconpicker/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Domenik Hofer",
+            "homepage": "homm.ch"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "homm\\hommiconpicker\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "hommiconpicker",
+        "handle": "hommiconpicker",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/HOMMinteractive/hommiconpicker/master/CHANGELOG.md",
+        "class": "homm\\hommiconpicker\\Hommiconpicker"
+    }
+}

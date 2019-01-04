@@ -1,0 +1,76 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * hommiconpicker plugin for Craft CMS 3.x
+ *
+ * HommiconpickerField Field Input
+ *
+ * @author    Domenik Hofer
+ * @copyright Copyright (c) 2019 Domenik Hofer
+ * @link      homm.ch
+ * @package   Hommiconpicker
+ * @since     1.0.0
+ */
+#}
+
+
+
+ <input type="hidden" name="{{ name }}[icon]" class="iconpicker-icon" value="{{ value }}">
+
+  <p class="iconpicker-msg homm-iconpicker{%if value == ''%}--empty{% endif %}">
+    <span class="homm-iconpicker">
+      <span class="iconpicker-preview">
+	   {% for icon in icons %}
+{% if icon.getFilename(false) == value %}
+{% set iconSvg = icon.getUrl()|slice(1) %}
+{{ inline(assetsUrl ~ iconSvg) | raw }}
+
+
+
+{% endif %}
+{% endfor %} 
+      </span>
+    </span>
+    <span class="iconpicker-code">
+	{{value}}
+    </span>
+  </p>
+  <button class="iconpickerField_modaltoggle btn" type="button">Icon auswählen</button>
+  <button class="iconpickerField_removeicon btn" type="button">Icon entfernen</button>
+
+  <div class="modal iconpickerField_modal elementselectormodal" style="display: none" id="{{ name }}_modal">
+    <div class="body">
+      <div class="content">
+        <div class="main">
+          <div class="homm-iconpicker">
+             
+			 {% for icon in icons %}
+{% if icon.folder == 'icons' %}
+
+{% set iconSvg = icon.getUrl()|slice(1) %}
+<span data-val="{{icon.getFilename(false)}}" class="{% if value == icon.getFilename(false) %} iconpicker--selected {% endif %}" title="{{icon.getFilename(false)}}">{{ inline(assetsUrl ~ iconSvg) | raw }}</span>
+
+
+
+{% endif %}
+{% endfor %} 
+			 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="iconpickerField_modal_preview"></div>
+      <div class="buttons right">
+        <div class="btn iconpickerField_modal_close" tabindex="0">Schliessen</div>
+        <div class="btn disabled submit iconpickerField_modal_select">Icon auswahlen</div>
+      </div>
+    </div>
+    <div class="resizehandle"></div>
+  </div>
+
+
+
+
+
+
