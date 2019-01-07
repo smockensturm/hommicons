@@ -1,2 +1,2 @@
 # hommiconpicker
-Alle svgs im Ordner "icons" werden ausgelesen
+Alle bilder im Ordner "icons" werden ausgelesen. Bitte nur SVG's in diesen Ordner!
