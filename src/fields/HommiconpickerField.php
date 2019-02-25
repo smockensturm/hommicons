@@ -113,11 +113,15 @@ class HommiconpickerField extends Field
     public function normalizeValue($value, ElementInterface $element = null)
     {
 	
-	if(gettype($value) == 'string'){
-        return json_decode($value)->icon; 
-	}else{
-	return $value;
-	}
+	if (gettype($value) == 'string') {
+            if (isset(json_decode($value)->icon)) {
+                return json_decode($value)->icon;
+            } else {
+                return $value;
+            }
+        } else {
+            return $value;
+        }
 	
     }
 
