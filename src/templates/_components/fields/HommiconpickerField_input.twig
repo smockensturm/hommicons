@@ -23,7 +23,7 @@
 	   {% for icon in icons %}
 {% if icon.getFilename(false) == value %}
 {% set iconSvg = icon.getUrl()|slice(1) %}
-{{ inline(assetsUrl ~ iconSvg) | raw }}
+{{ svg(iconSvg) }}
 
 
 
@@ -48,7 +48,7 @@
 {% if icon.folder == 'icons' %}
 
 {% set iconSvg = icon.getUrl()|slice(1) %}
-<span data-val="{{icon.getFilename(false)}}" class="{% if value == icon.getFilename(false) %} iconpicker--selected {% endif %}" title="{{icon.getFilename(false)}}">{{ inline(assetsUrl ~ iconSvg) | raw }}</span>
+<span data-val="{{icon.getFilename(false)}}" class="{% if value == icon.getFilename(false) %} iconpicker--selected {% endif %}" title="{{icon.getFilename(false)}}">{{ svg(iconSvg) }}</span>
 
 
 
