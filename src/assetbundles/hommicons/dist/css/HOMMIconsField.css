@@ -1,0 +1,54 @@
+/**
+ * HOMM Icons plugin for Craft CMS 3.x
+ *
+ * HOMMIconsField Field CSS
+ *
+ * @author    Domenik Hofer
+ * @copyright Copyright (c) 2019 Domenik Hofer
+ * @link      https://github.com/HOMMinteractive
+ * @package   HOMMIcons
+ * @since     1.0.0
+ */
+
+.homm-iconpicker span {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+    border: 2px solid rgba(0, 0, 0, 0);
+}
+
+.homm-iconpicker .iconpicker-preview, .iconpicker-msg .homm-iconpicker, .iconpicker-code {
+    padding: 0 !important;
+    border: none !important;
+    line-height: 50px !important;
+}
+
+.iconpicker-code {
+    margin-left: 10px !important;
+    width: 200px !important;
+}
+
+.iconpicker-msg {
+    display: flex;
+}
+
+.homm-iconpicker span svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.homm-iconpicker--empty {
+    display: none;
+}
+
+.homm-iconpicker .iconpicker-preview {
+    cursor: default;
+}
+
+.homm-iconpicker span.iconpicker--selected {
+    border: 2px solid #cc5643;
+    border-radius: 2px;
+}

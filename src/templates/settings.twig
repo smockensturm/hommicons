@@ -1,0 +1,37 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * HOMM Icons plugin for Craft CMS 3.x
+ *
+ * HOMMIconsField Field Input
+ *
+ * @author    Domenik Hofer
+ * @copyright Copyright (c) 2019 Domenik Hofer
+ * @link      https://github.com/HOMMinteractive
+ * @package   HOMMIcons
+ * @since     1.0.1
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("homm\\hommicons\\assetbundles\\settings\\SettingsAsset") %}
+
+<h4>{{ 'Select the volume with the SVG icons'|t('hommsocialfeed') }}</h4>
+
+{% set options = [] %}
+{% for volume in volumes.allVolumes() %}
+    {% set options = options|merge([{
+        value: volume.handle,
+        label: volume.name
+    }]) %}
+{% endfor %}
+
+{{ forms.select({
+    label: 'Icon Picker Volume'|t('hommsocialfeed'),
+    id: 'iconsVolume',
+    name: 'iconsVolume',
+    value: settings['iconsVolume'],
+    options: options,
+    required: true,
+}) }}

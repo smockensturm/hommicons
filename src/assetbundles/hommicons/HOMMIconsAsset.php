@@ -1,21 +1,21 @@
 <?php
 /**
- * hommiconpicker plugin for Craft CMS 3.x
+ * HOMM Icons plugin for Craft CMS 3.x
  *
- * Icon Picker
+ * Craft CMS Icon Picker
  *
- * @link      homm.ch
- * @copyright Copyright (c) 2019 Domenik Hofer
+ * @link      https://github.com/HOMMinteractive
+ * @copyright Copyright (c) 2019 HOMM interactive
  */
 
-namespace homm\hommiconpicker\assetbundles\hommiconpicker;
+namespace homm\hommicons\assetbundles\hommicons;
 
 use Craft;
 use craft\web\AssetBundle;
 use craft\web\assets\cp\CpAsset;
 
 /**
- * HommiconpickerFieldFieldAsset AssetBundle
+ * HOMMIconsAsset AssetBundle
  *
  * AssetBundle represents a collection of asset files, such as CSS, JS, images.
  *
@@ -29,10 +29,10 @@ use craft\web\assets\cp\CpAsset;
  * http://www.yiiframework.com/doc-2.0/guide-structure-assets.html
  *
  * @author    Domenik Hofer
- * @package   Hommiconpicker
+ * @package   HOMMIcons
  * @since     1.0.0
  */
-class HommiconpickerAsset extends AssetBundle
+class HOMMIconsAsset extends AssetBundle
 {
     // Public Methods
     // =========================================================================
@@ -43,7 +43,7 @@ class HommiconpickerAsset extends AssetBundle
     public function init()
     {
         // define the path that your publishable resources live
-        $this->sourcePath = "@homm/hommiconpicker/assetbundles/hommiconpicker/dist";
+        $this->sourcePath = "@homm/hommicons/assetbundles/hommicons/dist";
 
         // define the dependencies
         $this->depends = [
@@ -53,11 +53,11 @@ class HommiconpickerAsset extends AssetBundle
         // define the relative path to CSS/JS files that should be registered with the page
         // when this asset bundle is registered
         $this->js = [
-            'js/HommiconpickerField.js',
+            'js/HOMMIconsField.js',
         ];
 
         $this->css = [
-            'css/HommiconpickerField.css',
+            'css/HOMMIconsField.css',
         ];
 
         parent::init();

@@ -1,40 +1,46 @@
 {
-    "name": "homm/hommiconpicker",
-    "description": "Icon Picker",
+    "name": "homm/hommicons",
+    "description": "Craft CMS Icon Picker",
     "type": "craft-plugin",
-    "version": "1.0.1",
+    "version": "0.0.1",
     "keywords": [
         "craft",
         "cms",
         "craftcms",
         "craft-plugin",
-        "hommiconpicker"
+        "hommicons",
+        "icon picker"
     ],
     "support": {
-        "docs": "https://github.com/HOMMinteractive/hommiconpicker/blob/master/README.md",
-        "issues": "https://github.com/HOMMinteractive/hommiconpicker/issues"
+        "docs": "https://github.com/HOMMinteractive/hommicons/blob/master/README.md",
+        "issues": "https://github.com/HOMMinteractive/hommicons/issues"
     },
     "license": "MIT",
     "authors": [
+        {
+            "name": "Benjamin Ammann",
+            "homepage": "https://github.com/ammannbe"
+        },
         {
             "name": "Domenik Hofer",
             "homepage": "https://www.homm.ch"
         }
     ],
     "require": {
-        "craftcms/cms": "^3.0.0-RC1"
+        "craftcms/cms": "^3.0.0"
     },
     "autoload": {
         "psr-4": {
-          "homm\\hommiconpicker\\": "src/"
+          "homm\\hommicons\\": "src/"
         }
     },
     "extra": {
-        "name": "hommiconpicker",
-        "handle": "hommiconpicker",
-        "hasCpSettings": false,
-        "hasCpSection": false,
-        "changelogUrl": "https://raw.githubusercontent.com/HOMMinteractive/hommiconpicker/master/CHANGELOG.md",
-        "class": "homm\\hommiconpicker\\Hommiconpicker"
+        "name": "HOMM Icons",
+        "handle": "hommicons",
+        "developer": "HOMM interactive",
+        "developerUrl": "https://github.com/HOMMinteractive",
+        "documentationUrl": "https://github.com/HOMMinteractive/hommicons/blob/master/README.md",
+        "changelogUrl": "https://raw.githubusercontent.com/HOMMinteractive/hommicons/master/CHANGELOG.md",
+        "class": "homm\\hommicons\\HOMMIcons"
     }
 }
