@@ -42,8 +42,12 @@
 
                             {% set iconSvg = icon.getUrl()|slice(1) %}
                             <span data-val="{{ icon.getFilename(false) }}"
-                                  class="{% if value == icon.getFilename(false) %}iconpicker--selected{% endif %}"
-                                  title="{{ icon.getFilename(false) }}">{{ svg(iconSvg) }}</span>
+                                  class="{{ value == icon.getFilename(false) ? 'iconpicker--selected' }}"
+                                  title="{{ icon.getFilename(false) }}"
+                            >
+                                {{ svg(iconSvg) }}
+                                <label><small>{{ icon.getFilename(false) }}</small></label>
+                            </span>
                         {% endif %}
                     {% endfor %}
 
