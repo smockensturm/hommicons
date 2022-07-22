@@ -29,6 +29,11 @@ use craft\helpers\Json;
  */
 class HOMMIconsField extends Field
 {
+    /**
+     * @deprecated only exists for backwards compatibility
+     */
+    public $someAttribute = 'Some Default';
+
     // Static Methods
     // =========================================================================
 
