@@ -35,16 +35,6 @@ use craft\helpers\Json;
  */
 class HOMMIconsField extends Field
 {
-    // Public Properties
-    // =========================================================================
-
-    /**
-     * Some attribute
-     *
-     * @var string
-     */
-    public $someAttribute = 'Some Default';
-
     // Static Methods
     // =========================================================================
 
@@ -72,7 +62,7 @@ class HOMMIconsField extends Field
      * appended as well.
      * @see \yii\db\QueryBuilder::getColumnType()
      */
-    public function getContentColumnType(): string
+    public function getContentColumnType(): array|string
     {
         return Schema::TYPE_STRING;
     }
@@ -90,7 +80,7 @@ class HOMMIconsField extends Field
      *
      * @return mixed The prepared field value
      */
-    public function normalizeValue($value, ElementInterface $element = null)
+    public function normalizeValue(mixed $value, ?\craft\base\ElementInterface $element = null): mixed
     {
         if (gettype($value) == 'string') {
             if (isset(json_decode($value)->icon)) {
@@ -201,7 +191,7 @@ class HOMMIconsField extends Field
      *
      * @return string The input HTML.
      */
-    public function getInputHtml($value, ElementInterface $element = null): string
+    public function getInputHtml(mixed $value, ?\craft\base\ElementInterface $element = null): string
     {
         // Register our asset bundle
         Craft::$app->getView()->registerAssetBundle(HOMMIconsAsset::class);

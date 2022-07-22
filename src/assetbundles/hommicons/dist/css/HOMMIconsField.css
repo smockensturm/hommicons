@@ -10,13 +10,20 @@
  * @since     1.0.0
  */
 
-.homm-iconpicker span {
-    width: 50px;
-    height: 60px;
+.homm-iconpicker {
+    display: flex;
+    gap: 5px;
+}
+
+.homm-iconpicker > span {
+    width: 65px;
+    height: 85px;
     display: inline-block;
     cursor: pointer;
-    padding: 10px;
-    border: 2px solid rgba(0, 0, 0, 0);
+    padding: 8px;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .homm-iconpicker label {
@@ -25,17 +32,34 @@
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
+    transition: all 200ms ease-in-out;
+    line-height: 1;
+}
+
+.homm-iconpicker > span:hover label {
+    overflow: visible;
+    word-wrap: unset;
 }
 
 .homm-iconpicker label > small {
-    font-size: 0.8em;
     white-space: nowrap;
 }
 
-.homm-iconpicker .iconpicker-preview, .iconpicker-msg .homm-iconpicker, .iconpicker-code {
+.homm-iconpicker > span:hover label > small {
+    white-space: break-spaces;
+}
+
+.homm-iconpicker .iconpicker-preview,
+.iconpicker-msg .homm-iconpicker, .iconpicker-code {
     padding: 0 !important;
     border: none !important;
     line-height: 50px !important;
+    width: 50px !important;
+    height: 50px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .iconpicker-code {
@@ -63,5 +87,5 @@
 
 .homm-iconpicker span.iconpicker--selected {
     border: 2px solid #cc5643;
-    border-radius: 2px;
+    border-radius: 5px;
 }

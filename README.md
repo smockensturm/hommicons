@@ -1,4 +1,4 @@
-# HOMM Icons plugin for Craft CMS 3.x
+# HOMM Icons plugin for Craft CMS
 
 Craft CMS Icon Picker
 
@@ -9,7 +9,9 @@ Craft CMS Icon Picker
 
 ## Requirements
 
-This plugin requires Craft CMS 3.x.
+This plugin requires Craft CMS 4.x.
+
+For the Craft CMS 3.x plugin version, see 0.x tags.
 
 ## Installation
 

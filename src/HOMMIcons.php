@@ -58,12 +58,12 @@ class HOMMIcons extends Plugin
      *
      * @var string
      */
-    public $schemaVersion = '0.0.1';
+    public string $schemaVersion = '1.0.0-alpha.1';
 
     /**
      * @var bool
      */
-    public $hasCpSettings = true;
+    public bool $hasCpSettings = true;
 
     // Public Methods
     // =========================================================================
@@ -85,17 +85,6 @@ class HOMMIcons extends Plugin
             }
         );
 
-        // Do something after we're installed
-        Event::on(
-            Plugins::class,
-            Plugins::EVENT_AFTER_INSTALL_PLUGIN,
-            function (PluginEvent $event) {
-                if ($event->plugin === $this) {
-                    // We were just installed
-                }
-            }
-        );
-
         Craft::info(
             Craft::t(
                 'hommicons',
@@ -112,7 +101,7 @@ class HOMMIcons extends Plugin
     /**
      * @inheritdoc
      */
-    protected function createSettingsModel()
+    protected function createSettingsModel(): ?\craft\base\Model
     {
         return new Settings();
     }
@@ -120,7 +109,7 @@ class HOMMIcons extends Plugin
     /**
      * @inheritdoc
      */
-    protected function settingsHtml(): string
+    protected function settingsHtml(): ?string
     {
         return Craft::$app->view->renderTemplate(
             'hommicons/settings',
