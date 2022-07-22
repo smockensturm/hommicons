@@ -13,8 +13,10 @@ namespace homm\hommicons\models;
 use craft\base\Model;
 
 /**
+ * Class Settings
+ *
  * @author    Benjamin Ammann
- * @package   HOMMSocialFeed
+ * @package   HOMMIcons
  * @since     0.0.1
  */
 class Settings extends Model
@@ -25,7 +27,7 @@ class Settings extends Model
     /**
      * @var string Icon picker base volume name
      */
-    public $iconsVolume = 'pictures';
+    public string $iconsVolume = 'pictures';
 
     // Public Methods
     // =========================================================================

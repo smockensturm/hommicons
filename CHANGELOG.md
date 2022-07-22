@@ -9,6 +9,7 @@ to [Semantic Versioning](http://semver.org/).
 
 - Craft CMS 4 ready
 - Comments cleanup
+- fixed version number
 
 ## 0.0.3 - 2022-06-10
 
