@@ -13,14 +13,15 @@
 .homm-iconpicker {
     display: flex;
     gap: 5px;
+    flex-wrap: wrap;
 }
 
 .homm-iconpicker > span {
-    width: 65px;
-    height: 85px;
+    width: 70px;
+    height: 80px;
     display: inline-block;
     cursor: pointer;
-    padding: 8px;
+    padding: 7px;
     border: 2px solid transparent;
     box-sizing: border-box;
     text-align: center;
@@ -53,6 +54,7 @@
 .iconpicker-msg .homm-iconpicker, .iconpicker-code {
     padding: 0 !important;
     border: none !important;
+    flex-basis: 50px !important;
     line-height: 50px !important;
     width: 50px !important;
     height: 50px !important;
@@ -71,10 +73,11 @@
     display: flex;
 }
 
-.homm-iconpicker span svg {
+.homm-iconpicker span img {
     display: block;
-    width: 100%;
-    height: calc(100% - 1em);
+    width: 50px;
+    height: 50px;
+    max-width: unset;
 }
 
 .homm-iconpicker--empty {

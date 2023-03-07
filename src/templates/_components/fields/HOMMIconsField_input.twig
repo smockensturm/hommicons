@@ -19,7 +19,7 @@
         <span class="iconpicker-preview">
            {% for icon in icons %}
                {% if icon.getFilename(false) == value %}
-                   {{ svg(icon.getVolume().path ~ '/' ~ icon.getPath()) }}
+                   <img src="{{ icon.getUrl() }}" alt="{{ icon.getFilename(false) }}" loading="lazy">
                {% endif %}
            {% endfor %}
         </span>
@@ -42,7 +42,7 @@
                                   class="{{ value == icon.getFilename(false) ? 'iconpicker--selected' }}"
                                   title="{{ icon.getFilename(false) }}"
                             >
-                                {{ svg(icon.getVolume().path ~ '/' ~ icon.getPath()) }}
+                                <img src="{{ icon.getUrl() }}" alt="{{ icon.getFilename(false) }}" loading="lazy">
                                 <label><small>{{ icon.getFilename(false) }}</small></label>
                             </span>
                         {% endif %}
