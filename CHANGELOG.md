@@ -7,6 +7,10 @@ to [Semantic Versioning](http://semver.org/).
 
 ## 1.0.2 - 2022-11-24
 
+- Fixed: "path not allowed" exception: use icons URL instead of path
+
+## 1.0.2 - 2022-11-24
+
 - Fixed: Icons are not listed in admin if using revAssetUrls [#2](https://github.com/HOMMinteractive/hommicons/issues/2)
 
 ## 1.0.1 - 2022-07-22
