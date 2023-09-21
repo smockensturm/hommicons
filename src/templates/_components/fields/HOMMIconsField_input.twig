@@ -29,7 +29,9 @@
     </span>
 </p>
 <button class="iconpickerField_modaltoggle btn" type="button">{{ 'Choose icon'|t('hommicons') }}</button>
-<button class="iconpickerField_removeicon btn" type="button">{{ 'Remove icon'|t('hommicons') }}</button>
+{% if value %}
+    <button class="iconpickerField_removeicon btn" type="button">{{ 'Remove icon'|t('hommicons') }}</button>
+{% endif %}
 
 <div class="modal iconpickerField_modal elementselectormodal" style="display: none" id="{{ name }}_modal">
     <div class="body">

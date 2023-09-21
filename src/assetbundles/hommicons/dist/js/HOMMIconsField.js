@@ -125,7 +125,7 @@ Craft.IconpickerModal = Garnish.Modal.extend(
 
                 // Set icon value and enable select button
                 self.icon = $(this).data('val');
-                self.iconSvg = $(this).find('svg').parent().html();
+                self.iconSvg = $(this).find('img').parent().html();
                 self.enableSelectBtn();
             });
         },
